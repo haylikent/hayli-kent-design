@@ -1,1 +1,150 @@
 /* font-family: motiva-sans, sans-serif; */
+html, * {
+    font-family: motiva-sans, sans-serif;
+    list-style-type: none;
+}
+#logo {
+    display: none;
+}
+
+  .nav-container {
+    margin: 0 auto;
+    width: 100%
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+  nav ul li {
+    position: relative;
+  }
+  nav ul li a, nav ul li a:visited {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: #000;
+    color: #30506c;
+    text-decoration: none;
+  }
+  nav ul li a:hover, nav ul li a:visited:hover {
+    color: #f2bb4c;
+  }
+  /* Mobile navigation */
+  .nav-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000;
+    height: 70px;
+    width: 70px;
+  }
+  
+    .navigation {
+      width: 100%;
+    }
+    
+    .nav-mobile {
+      display: block;
+    }
+    nav {
+      width: 100%;
+      padding: 70px 0 15px;
+      text-align: center;
+    }
+    nav ul {
+      display: none;
+    }
+   
+    nav ul li a {
+      padding: 15px;
+      line-height: 20px;
+    }
+  
+  @media screen and (min-width: 768px) {
+    .relative {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    .absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #logo {
+        display: block;
+    }
+
+
+    nav {
+        padding: 0;
+        text-align: right;
+    }
+    .nav-mobile {
+        display: none;
+      }
+      nav.wrapper {
+      padding-top: .75em;
+  }
+
+    .nav-list {
+      display: block !important;
+    }
+
+    nav li {
+      display: inline-block;
+    }
+    .navigation {
+      height: 70px;
+      background: #333;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  #nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+      z-index: 1;
+  }
+  #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #fff;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+    background-color: #30506c;
+  }
+  #nav-toggle span:before {
+    top: -10px;
+    background-color: #30506c;
+  }
+  #nav-toggle span:after {
+    bottom: -10px;
+    background-color: #30506c;
+  }
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+  #nav-toggle.active span:before, #nav-toggle.active span:after {
+    top: 0;
+  }
+  #nav-toggle.active span:before {
+    transform: rotate(45deg);
+    background-color: #30506c;
+  }
+  #nav-toggle.active span:after {
+    transform: rotate(-45deg);
+    background-color: #30506c;
+  }
