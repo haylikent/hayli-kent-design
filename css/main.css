@@ -1,12 +1,22 @@
 /* font-family: motiva-sans, sans-serif; */
+/* Light Blue #c4e4dd;
+Light blue shadow #a8c1bb;
+Black #1c3538;
+Light Pink #f2ac94;
+Pink #e1827c;
+Light green #498e84; 
+Off white bg #f1f1ef;
+*/
+
 html, * {
     font-family: motiva-sans, sans-serif;
     list-style-type: none;
 }
+
+/* ---------------- HEADER NAV W HAMBURGER ---------------- */
 #logo {
     display: none;
 }
-
   .nav-container {
     margin: 0 auto;
     width: 100%
@@ -25,19 +35,18 @@ html, * {
     display: block;
     padding: 0 20px;
     line-height: 70px;
-    background: #000;
-    color: #30506c;
+    background: transparent;
+    color: #1c3538;;
     text-decoration: none;
   }
   nav ul li a:hover, nav ul li a:visited:hover {
-    color: #f2bb4c;
+    color: #e1827c;;
   }
-  /* Mobile navigation */
   .nav-mobile {
     position: absolute;
     top: 0;
     right: 0;
-    background: #000;
+    background: transparent;
     height: 70px;
     width: 70px;
   }
@@ -63,7 +72,7 @@ html, * {
       line-height: 20px;
     }
   
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 64em) {
     .relative {
         position: relative;
         top: 0;
@@ -78,7 +87,6 @@ html, * {
     #logo {
         display: block;
     }
-
 
     nav {
         padding: 0;
@@ -100,7 +108,7 @@ html, * {
     }
     .navigation {
       height: 70px;
-      background: #333;
+      background: transparent;
       width: 100%;
       z-index: 1;
     }
@@ -124,15 +132,15 @@ html, * {
     display: block;
     content: '';
     transition: all 300ms ease-in-out;
-    background-color: #30506c;
+    background-color: #1c3538;;
   }
   #nav-toggle span:before {
     top: -10px;
-    background-color: #30506c;
+    background-color: #1c3538;;
   }
   #nav-toggle span:after {
     bottom: -10px;
-    background-color: #30506c;
+    background-color: #1c3538;;
   }
   #nav-toggle.active span {
     background-color: transparent;
@@ -142,9 +150,139 @@ html, * {
   }
   #nav-toggle.active span:before {
     transform: rotate(45deg);
-    background-color: #30506c;
+    background-color :#1c3538;;
   }
   #nav-toggle.active span:after {
     transform: rotate(-45deg);
-    background-color: #30506c;
+    background-color: #1c3538;;
   }
+
+  /* ---------------- IMAGES AND MEDIA ---------------- */
+  #bg-header {
+    background-image: url(../img/bg-header.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    padding-bottom: 15rem;
+}
+@media screen and (min-width: 40em) {
+#bg-header {
+  padding-bottom: 25rem;
+}
+
+}
+  /* ---------------- BUTTONS ---------------*/
+.kent-button {
+  display: inline-block;
+  background-color: #f2ac94;
+  color: #1c3538;
+  font-size: .75rem;
+  font-family: helvetica;
+  padding: .75em 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .2em;
+  border-radius: 2em;
+  border-bottom: 0.25em solid #b78074;
+  -moz-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  box-shadow: 0 2px 3px #ccc;
+  position: relative;
+  width: 80%;
+  
+}
+
+.kent-button:hover {
+  background-color: #e1827c;
+  border-bottom-width: 0;
+  margin-top: 0.25em;
+  color: #1c3538; 
+}
+.kent-button:focus {
+  color: #1c3538;
+}
+@media screen and (min-width: 40em) {
+  .kent-button {
+    width: auto;
+  }
+  }
+
+  /* ----- ASPECT RATIOS ----*/
+
+div[class*="ratio-"] {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.ratio-16x9 {
+  padding: 56.25% 0 0 0;
+}
+
+.ratio-16x8 {
+  padding: 50% 0 0 0;
+}
+
+.ratio-16x7 {
+  padding: 43.75% 0 0 0;
+}
+
+.ratio-16x6 {
+  padding: 37.5% 0 0 0;
+}
+
+.ratio-16x5 {
+  padding: 31.25% 0 0 0;
+}
+
+.ratio-16x4 {
+  padding: 25% 0 0 0;
+}
+
+.ratio-6x5 {
+  padding: 83.33% 0 0 0;
+}
+
+.ratio-5x4 {
+  padding: 80% 0 0 0;
+}
+
+.ratio-5x1 {
+  padding: 20% 0 0 0;
+}
+
+.ratio-4x5 {
+  padding: 120% 0 0 0;
+}
+
+.ratio-4x7 {
+  padding: 160% 0 0 0;
+}
+
+.ratio-4x3 {
+  padding: 75% 0 0 0;
+}
+
+.ratio-1x1 {
+  padding: 100% 0 0 0;
+}
+
+div[class*="ratio-"] img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}
