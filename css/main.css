@@ -12,8 +12,12 @@ html, * {
     font-family: motiva-sans, sans-serif;
     list-style-type: none;
 }
+html, main {
+  background-color: #f1f1ef;
 
-/* ---------------- HEADER NAV W HAMBURGER ---------------- */
+}
+
+/* ---------------- HEADER NAV W HAMBURGER ------------------------------------- */
 #logo {
     display: none;
 }
@@ -111,6 +115,7 @@ html, * {
       background: transparent;
       width: 100%;
       z-index: 1;
+      margin-bottom: 8rem;
     }
   }
 
@@ -124,7 +129,7 @@ html, * {
   }
   #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
     cursor: pointer;
-    border-radius: 1px;
+    border-radius: 3px;
     height: 5px;
     width: 35px;
     background: #fff;
@@ -157,22 +162,90 @@ html, * {
     background-color: #1c3538;;
   }
 
-  /* ---------------- IMAGES AND MEDIA ---------------- */
+  /* ---------------- IMAGES AND MEDIA --------------------------------------- */
   #bg-header {
     background-image: url(../img/bg-header.jpg);
     background-position:center;
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
-    padding-bottom: 15rem;
+    padding-bottom: 7rem;
+
 }
+#contact {
+  background-image: url(../img/bg-footer.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  
+}
+
+
+footer a {
+  color: #1c3538;
+  font-size: 1.5em; 
+}
+footer a:hover {
+  color: #e1827c;
+}
+
+
 @media screen and (min-width: 40em) {
 #bg-header {
-  padding-bottom: 25rem;
+  padding-bottom: 5rem;
+
 }
 
 }
-  /* ---------------- BUTTONS ---------------*/
+  /* ---------------- IMAGE HOVERS ----------------- */
+  .img-container {
+    position: relative;
+    width: auto;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #1c3538;
+  }
+  
+  .img-container:hover .overlay {
+    opacity: .85;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+
+
+  
+
+
+  /* ---------------- BUTTONS ------------------------------------------------- */
 .kent-button {
   display: inline-block;
   background-color: #f2ac94;
@@ -191,7 +264,7 @@ html, * {
   transition: 0.1s;
   box-shadow: 0 2px 3px #ccc;
   position: relative;
-  width: 80%;
+  width: 50%;
   
 }
 
@@ -210,7 +283,24 @@ html, * {
   }
   }
 
-  /* ----- ASPECT RATIOS ----*/
+  /* ---------------- SPACING AND ALIGNMENTS ------------------------------------- */
+
+  .grid-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  @media screen and (min-width: 40em) {
+    .kent-button {
+      width: auto;
+    }
+
+    .grid-container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    }
+
+  /* ----------------- ASPECT RATIOS ------------------------------------------- */
 
 div[class*="ratio-"] {
   display: block;
@@ -286,3 +376,7 @@ div[class*="ratio-"] img {
   object-fit: cover;
   font-family: 'object-fit: cover;';
 }
+ /* ----------------- UTILITY CLASSES ------------------------------------------- */
+ .img-rounded {
+   border-radius: 4px;
+ }
