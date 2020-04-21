@@ -8,11 +8,14 @@ Light green #498e84;
 Off white bg #f1f1ef;
 */
 
-html, * {
+html, *, h1, h2, h3, h4 {
     font-family: motiva-sans, sans-serif;
     list-style-type: none;
 }
-html, main {
+html {
+  scroll-behavior: smooth;
+}
+body {
   background-color: #f1f1ef;
 
 }
@@ -197,6 +200,14 @@ footer a:hover {
 
 }
 
+#about {
+  background-image: url(../img/bg-spch-bubble.jpg.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
 }
   /* ---------------- IMAGE HOVERS ----------------- */
   .img-container {
@@ -236,14 +247,24 @@ footer a:hover {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
   }
 
 
+  @media screen and (min-width: 40em) {
 
+    .text {
+      font-size: 20px;
+      bottom: 15%;
+      left: 25%;
+    }
+    
+    }
 
-  
-
+  /* ---------------- TYPOGRAPHY ------------------------------------- */
+h3 {
+  font-size: 2.15rem;
+}
 
   /* ---------------- BUTTONS ------------------------------------------------- */
 .kent-button {
