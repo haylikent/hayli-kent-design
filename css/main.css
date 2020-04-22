@@ -71,6 +71,7 @@ body {
       padding: 70px 0 15px;
       text-align: center;
     }
+   
     nav ul {
       display: none;
     }
@@ -124,6 +125,13 @@ body {
       width: 100%;
       z-index: 1;
       margin-bottom: 8rem;
+    }
+    .navigation-project {
+      height: 70px;
+      background: transparent;
+      width: 100%;
+      z-index: 1;
+      margin-bottom: 3rem;
     }
   }
 
