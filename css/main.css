@@ -21,14 +21,15 @@ body {
 }
 
 /* ---------------- HEADER NAV W HAMBURGER ------------------------------------- */
-#logo {
-    display: none;
-}
+
   .nav-container {
     margin: 0 auto;
     width: 100%
   }
-
+#logo {
+  margin-top: 10px;
+  margin-left: 15px;
+}
   nav ul {
     list-style: none;
     margin: 0;
@@ -93,6 +94,10 @@ body {
     }
     #logo {
         display: block;
+    }
+    #logo.relative {
+      top: 5px;
+      left: 5px;
     }
 
     nav {
@@ -210,61 +215,106 @@ footer a:hover {
 
 }
   /* ---------------- IMAGE HOVERS ----------------- */
-  .img-container {
+
+  *, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+  }
+  
+  
+  @media screen and (max-width: 640px){
+    .container{
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  @media screen and (min-width: 900px){
+    .container{
+      width: 33.33333%;
+    }
+  }
+  
+  
+  .content {
     position: relative;
-    width: auto;
-  }
-  
-  .image {
-    display: block;
     width: 100%;
-    height: auto;
+    margin: auto;
+    overflow: hidden;
   }
   
-  .overlay {
+  .content .content-overlay {
+    background: rgba(28,53,56,0.73);
     position: absolute;
+    height:100%;
+    width: 100%;
+    left: 0;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
     opacity: 0;
-    transition: .5s ease;
-    background-color: #1c3538;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
   }
   
-  .img-container:hover .overlay {
-    opacity: .85;
+  .content:hover .content-overlay{
+    opacity: 1;
   }
   
-  .text {
-    color: white;
-    font-size: 20px;
+  .content-image{
+    width: 100%;
+  }
+  
+  .content-details {
     position: absolute;
-    bottom: 15%;
-    left: 25%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     text-align: left;
+    padding-left: 1.5em;
+    padding-right: 1em;
+    width: 100%;
+    top: 75%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
   }
-
-
-  @media screen and (min-width: 40em) {
-
-    .text {
-      font-size: 20px;
-      bottom: 15%;
-      left: 25%;
-    }
-    
-    }
+  
+  .content:hover .content-details{
+    top: 75%;
+    left: 50%;
+    opacity: 1;
+  }
+  
+ .content {
+   color: #fff;
+ }
+  
+  .fadeIn-left{
+    left: 20%;
+  }
+  
 
   /* ---------------- TYPOGRAPHY ------------------------------------- */
 h3 {
   font-size: 2.15rem;
 }
+.smaller {
+  font-size: auto;
+}
+
+@media screen and (min-width: 40em) {
+  .smaller {
+    font-size: 1.5rem;
+  }
+  
+  }
 
   /* ---------------- BUTTONS ------------------------------------------------- */
 .kent-button {
@@ -298,6 +348,9 @@ h3 {
 .kent-button:focus {
   color: #1c3538;
 }
+#work a {
+  color: #fff;
+} 
 @media screen and (min-width: 40em) {
   .kent-button {
     width: auto;
