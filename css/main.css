@@ -203,13 +203,7 @@ p, h1, h2, h3, h4 {
 
 
 
-footer a {
-  color: #1c3538;
-  font-size: 1.5em; 
-}
-footer a:hover {
-  color: #e1827c;
-}
+
 
 
 @media screen and (min-width: 40em) {
@@ -229,47 +223,8 @@ footer a:hover {
 }
   /* ---------------- IMAGE HOVERS ----------------- */
 
-  .kent-image {
-    font-size: .75rem;
-    font-family: helvetica;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: .2em;
-    border-radius: 4px;
-    border-bottom: 0.25em solid #8C8C8C;
-    -moz-transition: 0.1s;
-    -webkit-transition: 0.1s;
-    transition: 0.1s;
-    box-shadow: 0 2px 3px #999;
-    position: relative;
-  }
-  .kent-image:hover {
-    border-bottom-width: 0;
-    margin-top: 3px;
-    opacity: .8;
-  }
-  
-  /* *, *:before, *:after{
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:border-box;
-    box-sizing: border-box;
-  }
-  
-  
-  @media screen and (max-width: 640px){
-    .container{
-      display: block;
-      width: 100%;
-    }
-  }
-  
-  @media screen and (min-width: 900px){
-    .container{
-      width: 33.33333%;
-    }
-  }
+ 
+
   
   
   .content {
@@ -277,6 +232,7 @@ footer a:hover {
     width: 100%;
     margin: auto;
     overflow: hidden;
+  
   }
   
   .content .content-overlay {
@@ -289,9 +245,9 @@ footer a:hover {
     bottom: 0;
     right: 0;
     opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s;
+    transition: 0.1s;
+    -moz-transition: 0.1s;
+    -webkit-transition: 0.1s;
   }
   
   .content:hover .content-overlay{
@@ -308,30 +264,25 @@ footer a:hover {
     padding-left: 1.5em;
     padding-right: 1em;
     width: 100%;
-    top: 75%;
-    left: 50%;
+    top: 0%;
+    left: 0%;
     opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-  }
   
+  }
   .content:hover .content-details{
-    top: 75%;
-    left: 50%;
+    top: 60%;
+    left: 0%;
     opacity: 1;
+    color: #fff;
   }
-  
+   .content-details p, .content-details h3 {
+     color: #fff;
+   }
  .content {
    color: #fff;
  }
   
-  .fadeIn-left{
-    left: 20%;
-  }
+  
   
 
   /* ---------------- TYPOGRAPHY ------------------------------------- */
@@ -400,7 +351,7 @@ h3 {
   background-color: #d0e2de;
   font-size: .75rem;
   font-family: helvetica;
-  padding: 10px 17px;
+  padding: 11px 17px;
   border-radius: 50px;
   border-bottom: 3px solid #a8c1bb;
   -moz-transition: 0.1s;
@@ -432,6 +383,8 @@ a.arrow {
     padding-bottom: 2rem;
     width: 92%;
   }
+
+  
 /* Galaxy S5 portrait */
 @media screen 
   and (device-width: 360px) 
@@ -457,11 +410,35 @@ a.arrow {
     #back-to-top.grid-container {
       padding-bottom: 0;
     }
+
+    #about .align-self-middle{
+      padding: 1.5rem;
+    }
     }
 
+    @media screen and (min-width: 64em) {
+      #about .align-self-middle{
+        padding: 4rem;
+      }
+    }
     footer .grid-container {
-      padding-top: 3.5em;
-      padding-bottom: 1em;
+      padding-top: 3.5rem;
+      padding-bottom: 1rem;
+    }
+
+
+     /* ---------------- FOOTER ------------------------------------- */
+     
+     footer a {
+      color: #1c3538;
+      font-size: 1.25em; 
+    }
+    footer a:hover {
+      color: #e1827c;
+    }
+
+    footer .align-self-bottom {
+      font-size: .75rem;
     }
   /* ----------------- ASPECT RATIOS ------------------------------------------- */
 
@@ -556,6 +533,15 @@ div[class*="ratio-"] img {
  .inherit {
    display: inherit;
  }
- @media screen and (min-width: 64em) {
+ .float-right-small {
+   float: right;
+ }
+ .small-display-none {
+   display: none;
+ }
+ @media screen and (min-width: 40em) {
+ .float-right-small {
+   float:none;
+ }
  
   }
