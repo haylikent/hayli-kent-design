@@ -38,6 +38,10 @@ p, h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
+    font-weight: 600;
+    background: transparent;
+    letter-spacing: 1.25px;
+
   }
   nav ul li {
     position: relative;
@@ -49,7 +53,7 @@ p, h1, h2, h3, h4 {
     background: transparent;
     color: #1c3538;;
     text-decoration: none;
-    font-weight: 600;
+
   }
   nav ul li a:hover, nav ul li a:visited:hover {
     color: #e1827c;
@@ -128,7 +132,7 @@ p, h1, h2, h3, h4 {
       background: transparent;
       width: 100%;
       z-index: 1;
-      margin-bottom: 8rem;
+      margin-bottom: 4rem;
     }
     .navigation-project {
       height: 70px;
@@ -183,7 +187,7 @@ p, h1, h2, h3, h4 {
   }
 
   /* ---------------- IMAGES AND MEDIA --------------------------------------- */
-  #bg-header {
+  #hero {
     background-image: url(../img/bg-header.jpg);
     background-position:center;
     background-repeat: no-repeat;
@@ -270,7 +274,7 @@ p, h1, h2, h3, h4 {
   
   }
   .content:hover .content-details{
-    top: 60%;
+    top: 70%;
     left: 0%;
     opacity: 1;
     color: #fff;
@@ -281,21 +285,43 @@ p, h1, h2, h3, h4 {
  .content {
    color: #fff;
  }
-  
-  
-  
+
 
   /* ---------------- TYPOGRAPHY ------------------------------------- */
 h1 {
   font-weight: 800;
+  font-size: 1.85rem;
 }
+
 h2 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  font-weight: 800;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+  margin-bottom: 0;
 }
+
+#previous span {
+font-size: 1rem;
+font-weight: 800;
+text-transform: uppercase;
+}
+
+#next span {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  }
+
+
+
 .smaller {
   font-size: auto;
 }
@@ -304,10 +330,20 @@ h3 {
 }
 
 @media screen and (min-width: 40em) {
-  .smaller {
-    font-size: 1.5rem;
+  h1 {
+    font-size: 3rem;
   }
-  
+
+  h3 {
+    font-size: 1.45rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.25px;
+  }
+
+  .smaller {
+    font-size: 1.25rem;
+  }
   } 
 
   /* ---------------- BUTTONS ------------------------------------------------- */
@@ -369,6 +405,14 @@ h3 {
 a.arrow {
   color: #1c3538;
 }
+#resume {
+  color: #e1827c;
+   
+}
+#resume:hover {
+  color: #f2ac94;
+  text-decoration: underline;
+}
 
 @media screen and (min-width: 40em) {
   .kent-button {
@@ -383,8 +427,14 @@ a.arrow {
     padding-bottom: 2rem;
     width: 92%;
   }
+  #hero .grid-container {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
 
-  
+  #about .align-self-middle {
+    padding: 0;
+  }
 /* Galaxy S5 portrait */
 @media screen 
   and (device-width: 360px) 
@@ -406,19 +456,20 @@ a.arrow {
       padding-top: 4rem;
       padding-bottom: 4rem;
     }
-
-    #back-to-top.grid-container {
-      padding-bottom: 0;
+    #hero .grid-container {
+      padding-bottom: 7rem;
+      padding-top: 11rem;
     }
 
+
     #about .align-self-middle{
-      padding: 1.5rem;
+      padding: 1rem;
     }
     }
 
     @media screen and (min-width: 64em) {
       #about .align-self-middle{
-        padding: 4rem;
+        padding: 3rem;
       }
     }
     footer .grid-container {
@@ -439,6 +490,7 @@ a.arrow {
 
     footer .align-self-bottom {
       font-size: .75rem;
+      text-align: center;
     }
   /* ----------------- ASPECT RATIOS ------------------------------------------- */
 
