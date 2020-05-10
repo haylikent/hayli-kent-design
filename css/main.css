@@ -29,10 +29,7 @@ p, h1, h2, h3, h4 {
     margin: 0 auto;
     width: 100%
   }
-#logo {
-  margin-top: 10px;
-  margin-left: 15px;
-}
+
   nav ul {
     list-style: none;
     margin: 0;
@@ -48,7 +45,7 @@ p, h1, h2, h3, h4 {
   }
   nav ul li a, nav ul li a:visited {
     display: block;
-    padding: 0 20px;
+    padding-right: 1rem;
     line-height: 70px;
     background: transparent;
     color: #1c3538;;
@@ -60,8 +57,8 @@ p, h1, h2, h3, h4 {
   }
   .nav-mobile {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50px;
+    right: 0px;
     background: transparent;
     height: 70px;
     width: 70px;
@@ -87,6 +84,8 @@ p, h1, h2, h3, h4 {
     nav ul li a {
       padding: 15px;
       line-height: 20px;
+      margin-top: 1.5rem;
+      margin-right: 1.5rem;
     }
   
   @media screen and (min-width: 64em) {
@@ -141,6 +140,17 @@ p, h1, h2, h3, h4 {
       z-index: 1;
       margin-bottom: 3rem;
     }
+
+    nav ul li a {
+      line-height: 20px;
+    
+        padding-right: 1rem;
+        line-height: 20px;
+        padding-top: 0;
+        margin-top: 0;
+        margin-right: 0
+      }
+  
   }
 
   #nav-toggle {
@@ -205,26 +215,18 @@ p, h1, h2, h3, h4 {
   
 }
 
-
-
-
-
-
-@media screen and (min-width: 40em) {
-#bg-header {
-  padding-bottom: 5rem;
-
+@media screen and (min-width: 64em) {
+  #about {
+    background-image: url(../img/bg-spch-bubble.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    
+  }
 }
 
-#about {
-  background-image: url(../img/bg-spch-bubble.jpg);
-  background-position:center;
-  background-repeat: no-repeat;
-  position: relative;
-  background-size: cover;
-}
 
-}
   /* ---------------- IMAGE HOVERS ----------------- */
 
  
@@ -288,10 +290,17 @@ p, h1, h2, h3, h4 {
 
 
   /* ---------------- TYPOGRAPHY ------------------------------------- */
+#hero h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+  
 h1 {
   font-weight: 800;
   font-size: 1.85rem;
 }
+
 
 h2 {
   font-size: 1rem;
@@ -361,7 +370,7 @@ letter-spacing: 1px;
   transition: 0.1s;
   box-shadow: 0 2px 3px #ccc;
   position: relative;
-  width: 50%;
+  width: 70%;
   
 }
 
@@ -425,8 +434,8 @@ a.arrow {
     width: 92%;
   }
   #hero .grid-container {
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+    padding-bottom: 6rem;
+    padding-top: 2rem;
   }
 
   #about .align-self-middle {
@@ -454,8 +463,7 @@ a.arrow {
       padding-bottom: 4rem;
     }
     #hero .grid-container {
-      padding-bottom: 7rem;
-      padding-top: 13rem;
+  
     }
 
 
@@ -570,6 +578,10 @@ div[class*="ratio-"] img {
   font-family: 'object-fit: cover;';
 }
  /* ----------------- UTILITY CLASSES ------------------------------------------- */
+ .margin-top-and-bottom {
+   margin-top: 3rem !important;
+   margin-bottom: 3rem !important;
+ }
  .img-rounded {
    border-radius: 4px;
  }
