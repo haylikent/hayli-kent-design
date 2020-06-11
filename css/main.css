@@ -423,7 +423,8 @@ letter-spacing: 1px;
   transition: 0.1s;
   box-shadow: 0 2px 3px #ccc;
   position: relative;
-  width: 60%;
+  width: 100%;
+  margin-left: -.5px
   
 }
 
@@ -476,7 +477,7 @@ a.arrow {
 
 @media screen and (min-width: 40em) {
   .kent-button {
-    width: 50%;
+    width: 40%;
   }
   }
 
@@ -508,9 +509,7 @@ a.arrow {
     #studio {
       width: 400px;
     }
-    .kent-button {
-      width: auto;
-    }
+  
     #hero {
       margin-bottom: 4rem;
     }
