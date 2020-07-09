@@ -204,14 +204,13 @@ p, h1, h2, h3, h4 {
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
-    padding-bottom: 7rem;
+    padding-bottom: 5rem;
 
 }
 #hero h1 {
-  border-right: solid 7px #1c3538;
+  border-right: solid 8px #1c3538;
   white-space: nowrap;
   overflow: hidden;     
-  font-size: 5rem;
   color: #1c3538;
   line-height: 1.15;
 }
@@ -220,13 +219,14 @@ p, h1, h2, h3, h4 {
 #hero h1 {
   animation: animated-text 1.25s steps(6,end) 1s 1 normal both,
              animated-cursor 600ms steps(40,end) infinite;
+            
 }
 
 /* text animation */
 
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 250px;}
+  to{width: 325px;}
 }
 
 /* cursor animations */
@@ -285,7 +285,7 @@ p, h1, h2, h3, h4 {
   }
   
   .content .content-overlay {
-    background: rgba(28,53,56,0.73);
+    background: rgba(28, 53, 56, 0.87);
     position: absolute;
     height:100%;
     width: 100%;
@@ -334,17 +334,20 @@ p, h1, h2, h3, h4 {
 
   /* ---------------- TYPOGRAPHY ------------------------------------- */
 #hero h1 {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 900;
   letter-spacing: 1px;
+  margin-top: 3rem;
 }
   
 h1 {
   font-weight: 800;
-  font-size: 1.85rem;
+  font-size: 2.5rem;
 }
 
-
+.tagline {
+  font-size: 1.25rem;
+}
 h2 {
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -352,7 +355,9 @@ h2 {
   font-weight: 900;
   margin-bottom: 1rem;
 }
-
+.margin-top-and-bottom h2 {
+  margin-bottom: 0;
+}
 h3 {
   font-size: 1.75rem;
   text-transform: uppercase;
@@ -361,7 +366,13 @@ h3 {
   margin-bottom: 0;
 }
 
-
+.topics {
+  color: #e1827c;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
 
 #previous span, #next span, #top span {
 font-size: .8rem;
@@ -391,7 +402,7 @@ letter-spacing: 1px;
 
 @media screen and (min-width: 40em) {
   h1 {
-    font-size: 3rem;
+    font-size: 3.8rem;
   }
 
   h3 {
@@ -412,7 +423,7 @@ letter-spacing: 1px;
   background-color: #f2ac94;
   color: #1c3538;
   font-size: .75rem; 
-  padding: .75em 4em;
+  padding: 12px 56px;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .2em;
@@ -423,8 +434,8 @@ letter-spacing: 1px;
   transition: 0.1s;
   box-shadow: 0 2px 3px #ccc;
   position: relative;
-  width: 100%;
-  margin-left: -.5px
+  width: auto;
+  margin-left: -4px;
   
 }
 
@@ -477,22 +488,18 @@ a.arrow {
 
 @media screen and (min-width: 40em) {
   .kent-button {
-    width: 40%;
+    width: auto;
   }
   }
 
   /* ---------------- SPACING AND ALIGNMENTS ------------------------------------- */
 
-  .grid-container {
+.grid-container {
     padding-top: 2rem;
     padding-bottom: 2rem;
     width: 92%;
   }
-  #hero .grid-container {
-    padding-bottom: 5rem;
-    padding-top: 2rem;
-  }
-
+  
   #about .align-self-middle {
     padding: 0;
   }
@@ -640,7 +647,7 @@ div[class*="ratio-"] img {
  }
  .circle {
    border-radius: 400px;
-   box-shadow: 0px 5px 4px #9b9b9b;
+   box-shadow: 0px 5px 0px #cccccc;
  }
  .sm-center {
    margin-right: auto!important;
@@ -669,6 +676,7 @@ div[class*="ratio-"] img {
  .content-alignment {
    margin-left: 1px;
  }
+
  @media screen and (min-width: 40em) {
  .float-right-small {
    float:none;
@@ -681,3 +689,4 @@ div[class*="ratio-"] img {
  }
  
   }
+
